@@ -35,3 +35,6 @@ README.txt 파일을 수시로 확인하세요.
     </script>
 
     insert into bbs (name, content) values('홍길동', '' )
+
+    w3schools.com
+    

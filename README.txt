@@ -23,5 +23,15 @@ README.txt 파일을 수시로 확인하세요.
     );
 
     insert into users (id, name, pass) values('test', '테스트', 'abcd');
+    insert into users (id, name, pass) values('admin', '관리자', 'abcd');
 
-        insert into users (id, name, pass) values('admin', '관리자', 'abcd');
+
+    안녕하세요?
+    <script>
+        for(var i=1; i<=5; i++)
+        {
+            alert(i);
+        }
+    </script>
+
+    insert into bbs (name, content) values('홍길동', '' )

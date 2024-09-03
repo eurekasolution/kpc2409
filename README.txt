@@ -45,17 +45,32 @@ README.txt 파일을 수시로 확인하세요.
 
     참고사이트 : https://www.security.org/how-secure-is-my-password/ 
 
-    void copy_array(char *str)
+    gcc -Wall  -DDBG_LEVEL1 a.c -o a
+
+
+    int copy_array(char *str)
     {
+        if(strlen(str) > 100)
+        {
+#ifdef DBG_LEVEL1
+            printf("Parameter error");
+#endif
+            return -1;
+        }
         char buf[100];
         strcpy(buf, str);
         printf("buf = %s\n", buf);
         printf("&buf = %p\n", buf);
+
+        return 1;
     }
 
     int main(int argc, char **argv)
     {
-        copy_array(argv[1]);
+        if(copy_array(argv[1]) < 0)
+        {
+            // error
+        }
         return 0;
     }
 

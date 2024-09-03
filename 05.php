@@ -22,10 +22,16 @@ $conn = connectDB();
 
 // id와 pass 값은 SQL 인젝션 테스트를 위해 직접 사용
 $id = $_POST['id'];
+
+//$id = htmlspecialchars($_POST["id"]);
+// id = str_replace("--", "", $id);
+// id = str_replace(" ", "", $id);
+
 $pass = $_POST['pass'];
 
 // SQL 쿼리문
 $query = "SELECT * FROM users WHERE id = '$id' AND pass = '$pass'";
+                                //       '' OR 2>1 limit 0, 1 -- ' AND pass = '  '
 
 // 쿼리 실행
 $result = mysqli_query($conn, $query);
@@ -49,15 +55,15 @@ mysqli_close($conn);
     <div class="container mt-5">
         <h2 class="text-center">로그인 결과</h2>
         <div class="mt-4">
-            <?php if ($user): ?>
+            <?php if ($user) { ?>
                 <div class="alert alert-success" role="alert">
-                    로그인 성공! 아이디: <strong><?php echo $id; ?></strong>
+                    로그인 성공! 아이디: <strong><?php echo $user["id"]; ?></strong>
                 </div>
-            <?php else: ?>
+            <?php } else{ ?>
                 <div class="alert alert-danger" role="alert">
                     로그인 실패! 아이디 또는 비밀번호가 잘못되었습니다.
                 </div>
-            <?php endif; ?>
+            <?php } ?>
         </div>
         <a href="04.php" class="btn btn-primary mt-3">돌아가기</a>
     </div>

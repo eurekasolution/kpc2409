@@ -44,3 +44,43 @@ README.txt 파일을 수시로 확인하세요.
     http://naver.me/FUhhy7AA
 
     참고사이트 : https://www.security.org/how-secure-is-my-password/ 
+
+    void copy_array(char *str)
+    {
+        char buf[100];
+        strcpy(buf, str);
+        printf("buf = %s\n", buf);
+        printf("&buf = %p\n", buf);
+    }
+
+    int main(int argc, char **argv)
+    {
+        copy_array(argv[1]);
+        return 0;
+    }
+
+    // 실행 : ./test "hello world"
+
+for()
+    main.php?cmd=login&id=test&pass=aaa
+
+https://www.daum.net/
+
+<input type="xxx">
+xxx : text (default)
+password : ******
+tel :
+number :
+email : 
+url : 
+
+<form method="post" action="다음페이지">
+    ID <input type="text" name="id">
+    PW <input type="password" name="pass">
+    <button type="submit">로그인</button>
+</form>
+
+헤더 : 다음페이지
+몸체
+id=test&pass=1234
+

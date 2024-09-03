@@ -38,3 +38,9 @@ README.txt 파일을 수시로 확인하세요.
 
     w3schools.com
     
+
+    ChatGPT를 이용한 버전 강의자료 다운로드 
+
+    http://naver.me/GippEdIl
+
+    참고사이트 : https://www.security.org/how-secure-is-my-password/ 

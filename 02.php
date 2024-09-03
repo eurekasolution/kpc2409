@@ -1,3 +1,10 @@
+<?php
+    session_save_path("sess");
+    session_start();
+
+    $_SESSION["userid"] = "kdhong";
+    $_SESSION["username"] = "홍길동메롱"
+?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>

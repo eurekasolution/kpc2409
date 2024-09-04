@@ -37,6 +37,17 @@
 <body>
 
 	<?php
+
+		//phpinfo();
+		$ip = $_SERVER["REMOTE_ADDR"];
+
+		$a = rand(1, 254);
+		$b = rand(1, 254);
+		$c = rand(1, 254);
+		$d = rand(1, 254);
+		$ip = "$a.$b.$c.$d";
+		echo "ip = $ip<br>";
+
 		include "menu.php";
 	?>
     <!-- Body Content -->

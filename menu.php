@@ -31,7 +31,7 @@
                             관리자메뉴
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                            <li><a class="dropdown-item" href="index.php?cmd=menu2-1">menu2-1</a></li>
+                            <li><a class="dropdown-item" href="index.php?cmd=admintest">Admin Test</a></li>
                             <li><a class="dropdown-item" href="index.php?cmd=menu2-2">menu2-2</a></li>
                         </ul>
                     </li>

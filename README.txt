@@ -101,3 +101,29 @@ url :
 몸체
 id=test&pass=1234
 
+Log : idx, who, ip, when, what
+
+다음과 같은 데이터베이스 스키마를 만들어줘.
+테이블 이름 : login
+필드 : idx, id, ip, time, work
+각각은 다음과 같은 특성
+idx : integer, 자동증가, 프라이머리 키
+id : varchar, 20글자
+ip : varchar, 15자
+time : YYYY-MM-DD HH:mm:SS 형태로 저장
+work : varchar , 100글자
+
+
+CREATE TABLE log (
+    idx INT AUTO_INCREMENT PRIMARY KEY,
+    id VARCHAR(20) NOT NULL,
+    ip VARCHAR(15) NOT NULL,
+    time DATETIME NOT NULL,
+    work VARCHAR(100) NOT NULL
+);
+
+
+만약에 주소창에 http://localhost:8000/index.php?cmd=test&abc=2
+이런 형태로 올때, index.php?cmd=test&abc=2 값을 PHP로 확인하는 방법을 알려줘.
+
+$_SERVER["REQUEST_URI"]

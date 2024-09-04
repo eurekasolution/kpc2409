@@ -1,0 +1,464 @@
+1. 보안전문가가 트래픽 모니터링 결과를 시각화해서 보는 모습을 그려줘.
+2. 보안전문가가 트래픽 모니터링 결과를 시각화해서 보는 모습을 그려줘.
+- 전문가는 대한민국 30대 여성이다.
+- 흰색 셔츠를 입고, 긴 펌을 머리를 하고 있다.
+3. C언어로 로또프로그램을 하나 제시해 줘
+4. C언어로 다음과 같은 프로그램을 하나 제시해 줘.
+- 몇 게임할 것인지 사용자한테 묻는다.
+- 게임수 만큼 다음을 반복함.
+  1 ~ 45까지의 정수 6개 추출
+  중복이 발생하면 안됨.
+-  결과를 오름차순으로 정렬
+- 10 미만은 03과 같이 두자리로 만들어줘.
+
+5. 다음과 같은 HTML코드를 만들어줘.
+- HTML5와 Bootstrap5를 적용
+- 순서, 이름, 생년월일, 나이를 테이블 형태로 출력
+- 순서 : 1부터 순차적으로 증가
+- 이름 : 역사 인물을 임의로 하나 추출
+- 생년월일 : 1970년부터 2020년까지 임의의 날짜 지정
+- 생년월일의 형식은 YYYY-MM-DD
+- 나이는 2024에서 생년을 뺀 값
+
+6. 다음과 같은 HTML코드를 만들어줘.
+- HTML5와 Bootstrap5를 적용
+- 순서, 이름, 생년월일, 나이를 테이블 형태로 출력
+- 순서 : 1부터 순차적으로 증가
+- 이름 : 조선 및 대한민국 역사 인물을 임의로 하나 추출
+- 생년월일 : 1970년부터 2020년까지 임의의 날짜 지정
+- 생년월일의 형식은 YYYY-MM-DD
+- 나이는 2024에서 생년을 뺀 값
+- 데이터를 30개 만들어줘.
+
+7. MySQL에서 데이터베이스(이름 : kpc)의 문자셋이 latin으로 되어있는데 utf8mb4로 설정 변경하고 싶어.
+
+8. 
+다음과 같은 01.html 파일을 만들어줘.
+- HTML5와 Bootstrap5를 이용
+- <body>는 <div class="container">로 구성되어 있음.
+- 내용에 다음을 출력해 줘.
+   웹 취약점 분석과 시큐어 코딩
+
+9. 
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹 취약점 분석과 시큐어 코딩</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-5">5</div>
+            <div class="col-3">3</div>
+            <div class="col-4">4</div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (optional, for enhanced features like modals) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+10. 
+다음과 같은 02.html 코드를 만들어 줘.
+
+- HTML5와 Bootstrap5를 이용
+- 페이지 제목 : 웹 취약점 분석
+- 메뉴는 드랍다운 메뉴를 이용해서 메뉴1, 메뉴2, 메뉴3이 있음.
+- 메뉴1에는 메뉴 1-1, 메뉴 1-2, 메뉴 1-3
+- 메뉴2에는 메뉴 2-1, 메뉴 2-2
+- 메뉴3에는 메뉴 3-1, 메뉴 3-2, 메뉴 3-3으로 구성
+- 몸체는 <div class="container">로 구성
+- 컨테이너의 내용은 비어있음.
+
+11. 
+다음과 같이 로그인 입력창을 보이는 프로그램을 04.php 로 만들어 줘.
+
+- <form> action = "05.php"
+- <input type="text" name="id">
+   placeholder="아이디를 입력하세요"
+- <input type="password" name = "pass">
+   placeholder ="비밀번호를 입력하세요."
+- HTML5와 Bootstrap5로 작성해 줘.
+
+12. 
+이 때, 05.php 파일은 다음과 같이 만들어줘.
+- HTML5, Bootstrap5로 구성
+- container에는 id와 pass값을 출력해줘.
+
+13. 
+다음과 같은 코드를 변경해 줘.
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 결과</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">로그인 결과</h2>
+        <div class="mt-4">
+            <p><strong>아이디:</strong> <?php echo $_POST['id'] ?></p>
+            <p><strong>비밀번호:</strong> <?php echo $_POST['pass'] ?></p>
+        </div>
+        <a href="04.php" class="btn btn-primary mt-3">돌아가기</a>
+    </div>
+
+    <!-- Bootstrap JS (optional, for enhanced features like modals) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+- 데이터베이스에 연결
+$DBName = "kpc";
+$DBUser = "kpc";
+$DBPass = "1111";
+
+$conn = connectDB() 형태로 만들어줘. connectDB() 는 연결후 객체 $conn를 반환
+
+위 코드에 값 확인 후
+users 테이블의 id, pass 필드와 비교해서 데이터가 있으면 성공 , 없으면 실패 메시지를 보여줘.
+
+14. 
+PDO를 사용하지 않고, mysqli_query, mysqli_fetch_array 함수로 처리해 줘.
+- id, pass는 htmlspecilachar()를 사용하지 않고 SQL Injection을 테스트하력 함.
+- 데이터베이스 검색후 데이터 있으면 성공, 없으면 실패로 화면에 출력해 주도록 변경해 줘.
+
+15. 
+mysql에서 데이터베이스의 비밀번호를 1111로 바꾸는 스크립트를 알려줘.
+
+16. 
+mysql에서 kpc 사용자를 삭제하는 스크립트를 알려줘
+
+17. 
+다음과 같은 코드에 Contrl-C를 눌렀을 때 "Control+C Pressed"가 출력되도록 해줘.
+#include <stdio.h>
+#include <unistd.h>
+
+int main()
+{
+        int i=0;
+        while(1)
+        {
+                printf("%d\n", ++i);
+                sleep(1);
+        }
+        return 0;
+}
+
+18. 
+HTML5와 Bootstrap5를 사용하는 예제 중 다음의 조건에 맞게 제시해줘.
+- body에는 아무 코딩이 없음. <body id="body">
+- jQuery 최신 버전을 이용해  getInitPage.php에서 정보요청
+- body에 getInitPage.php에서 얻어온 내용을 출력
+- 얻어온 내용은 <div class="container"><div class="row"><div class="col">웹 취약점 분석</div></div></div>
+
+19.
+
+화면에 아무런 내용이 나오지 않고 있어.
+
+20. 
+다음 코드에서 aaa가 출력안돼.
+        <script>
+        $(document).ready(function() {
+            // getInitPage.php에서 데이터를 가져와 body에 출력
+            $.get('getInitPage.php', function(data) {
+                console.log("AJAX 요청 성공");
+                console.log("서버 응답:", data);
+                $('#body').html(data);
+                document.getElementById('body').write('aaa')
+            })
+            .fail(function() {
+                console.log("AJAX 요청 실패");
+            });
+        });
+    </script>
+
+    21.
+    다음과 같은 index.php 파일을 제안해 줘.
+- HTML5, Bootstrap5를 사용
+- HTML의 title은 "취약점 분석"
+- <body>의 맨 앞에는 Navbar를 이용해서 메뉴를 배치
+- 메뉴는 "메뉴1, 메뉴2, 메뉴3"이 있음.
+- 메뉴1에는 menu1-1, menu1-2가 있다.
+- 메뉴2에는 menu2-1, menu2-2가 있다.
+각 메뉴는 링크를 다음과 같이 설정
+- index.php?cmd=menu1-1 
+이때 바디에서는 다음과 같이 동작함.
+$cmd값이 있으면 include "$cmd.php"를 추가
+$cmd가 없으면 include "init.php".를 연결
+- init.php 파일은 "웹 취약점 분석과 시큐어코딩 시작페이지"라고 출력
+db.php 파일이 있는데 내용은 다음과 같다.
+$DBName = "kpc";
+$DBUser = "kpc";
+$DBPass = "1111";
+connectDB() 함수는 데이터베이스에 연결한 후, $conn를 반환하는 함수 제시
+
+index.php의 시작부분에 include "db.php";를 한 후, $conn = connectDB(); 추가
+- body가 끝나는 부분에서는 데이터베이스 연결 종료
+- body의 맨 아래에는 사이트 정보를 출력하는데 다음과 같이 출력
+한국생산성본부(KPC) 웹 취약점 분석과 시큐어 코딩 과정
+
+22. 
+
+그런데 Footer가 바디의 내용이 적은 경우에는 화면의 맨 아래에 배치하게 다음의 코드를 변경해 줘.
+
+<?php
+include "db.php";
+$conn = connectDB();
+?>
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>취약점 분석</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.php">취약점 분석</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            메뉴1
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                            <li><a class="dropdown-item" href="index.php?cmd=injection">SQL Injection</a></li>
+                            <li><a class="dropdown-item" href="index.php?cmd=xss">XSS</a></li>
+							<li><a class="dropdown-item" href="index.php?cmd=brute">Brute Force</a></li>
+							<li><a class="dropdown-item" href="index.php?cmd=shell">Web Shell</a></li>
+							<li><a class="dropdown-item" href="index.php?cmd=board">Board</a></li>
+							<li><a class="dropdown-item" href="index.php?cmd=upload">File Upload</a></li>
+							<li><a class="dropdown-item" href="index.php?cmd=log">Log</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            메뉴2
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                            <li><a class="dropdown-item" href="index.php?cmd=menu2-1">menu2-1</a></li>
+                            <li><a class="dropdown-item" href="index.php?cmd=menu2-2">menu2-2</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">메뉴3</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Body Content -->
+    <div class="container mt-4">
+        <?php
+        if (isset($_GET['cmd'])) {
+            $cmd = $_GET['cmd'];
+            $filename = "$cmd.php";
+            if (file_exists($filename)) {
+                include $filename;
+            } else {
+                echo "<div class='alert alert-danger'>해당 페이지가 존재하지 않습니다.</div>";
+            }
+        } else {
+            include "init.php";
+        }
+        ?>
+    </div>
+
+    <!-- Footer -->
+    <footer class="container mt-5">
+        <p class="text-center">한국생산성본부(KPC) 웹 취약점 분석과 시큐어 코딩 과정</p>
+    </footer>
+
+    <?php
+    mysqli_close($conn);
+    ?>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+23. 
+config.php 파일이 다음과 같이 구성되어 있다.
+<?php
+    $sess_id = "__kpc_id__";
+    $sess_name = "__kpc_name__";
+    $sess_level = "__kpc_level__";
+
+    $adminLevel = 9;
+?>
+세션 이름을 변수화 했다.
+injection.php파일을 다음의 조건에 맞도록 제시해 줘.
+
+로그인이 안되어 있을 때는
+<form action="index.php?cmd=login" method="post">
+    <input type="text" name="id">
+    <input type="password" name="pass">
+   <button type="submit">
+</form>
+이런 형태인데, 적당한 placeholder를 넣어줘.
+그런데 로그인이 되어 있을 때는 위의 세션이름($sess_name) 님 <button>로그아웃</button>
+
+로그인 버튼을 클릭하면 
+$sql = "select * from users where id='$id' and pass='$pass'"; 와 같은 형태의 데이터베이스와 연동해 로그인 처리를 하고,
+세션값으로, 아이디, 이름, 레벨을 저장해 줘.
+mysqli_query($conn, $sql);
+mysqli_fetch_array($result); 와 같은 형태로 프로그래밍 해줘.
+SQL Injection을 연습하기 위한 코드이기 때문에 보안기능을 제거해 줘.
+- 로그아웃 버튼을 클릭하면 "index.php?cmd=logout"로 이동하고
+logout.php파일은 세션을 종료후 index.php?cmd=injection 으로 이동하게 해줘.
+
+24. 
+echo "include $filename , sessid = $sess_id<br>";
+                    include $filename;
+
+이때 $filename="injection.php"가 출력되고, $sess_id도 정상적으로 출력됨.
+그런데,, injection.php 파일이 
+
+
+<div class="container mt-5">
+<h1>SQL Injection 연습</h1>
+<?php
+    echo "sess id = $sess_id<br>";
+?>
+<?php if (!isset($_SESSION[$sess_id])): ?>
+    <!-- 로그인이 안 되어 있을 때 로그인 폼 -->
+    <form action="index.php?cmd=login" method="post" class="mt-4">
+        <div class="mb-3">
+            <input type="text" name="id" class="form-control" placeholder="아이디를 입력하세요">
+        </div>
+        <div class="mb-3">
+            <input type="password" name="pass" class="form-control" placeholder="비밀번호를 입력하세요">
+        </div>
+        <button type="submit" class="btn btn-primary">로그인</button>
+    </form>
+<?php else: ?>
+    <!-- 로그인이 되어 있을 때 -->
+    <p><?php echo $_SESSION[$sess_name]; ?> 님</p>
+    <form action="index.php?cmd=logout" method="get">
+        <button type="submit" class="btn btn-danger">로그아웃</button>
+    </form>
+<?php endif; ?>
+</div>
+이렇게 되어있을때 $sess_id를 인식하지 못하는 이유를 설명해줘.
+
+25.
+login.php파일이 다음과 같다.
+<?php
+    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_GET['cmd']) && $_GET['cmd'] == 'login') {
+        $id = $_POST['id'];
+        $pass = $_POST['pass'];
+
+        // 보안 기능이 제거된 SQL 인젝션이 가능한 쿼리
+        $sql = "SELECT * FROM users WHERE id='$id' AND pass='$pass'";
+
+        $result = mysqli_query($conn, $sql);
+        $user = mysqli_fetch_array($result);
+
+        if ($user) {
+            // 로그인 성공: 세션 값 저장
+            $_SESSION[$sess_id] = $user['id'];
+            $_SESSION[$sess_name] = $user['name'];
+            $_SESSION[$sess_level] = $user['level'];
+            $msg = $_SESSION[$sess_name] . "님 반갑니다.";
+        } else {
+            $msg = "아이디와 비밀번호를 확인하세요.";
+        }
+
+        echo "
+        <script>
+            alert('$msg');
+            location.href='index.php?cmd=injection';
+        </script>
+        ";
+    }
+
+?>
+이때 사용자 이름의 한글이 깨져. 이유를 알려줘.
+
+26. 
+다음과 같은 데이터베이스 스키마를 만들어줘.
+테이블 이름 : login
+필드 : idx, id, ip, time, work
+각각은 다음과 같은 특성
+idx : integer, 자동증가, 프라이머리 키
+id : varchar, 20글자
+ip : varchar, 15자
+time : YYYY-MM-DD HH:mm:SS 형태로 저장
+work : varchar , 100글자
+
+27. 
+만약에 주소창에 http://localhost:8000/index.php?cmd=test&abc=2
+이런 형태로 올때, index.php?cmd=test&abc=2 값을 PHP로 확인하는 방법을 알려줘.
+
+28. URI를 알고 싶은거야
+
+29.
+다음과 같은 board.php파일 만들어줘.
+이파일은 index.php?cmd=board로 접근해서 게시판 코드만 있으면 돼.
+$mode에는 list, write, dbwrite, show으로 구성되어있음.
+$mode가 없으면 list를 기본값으로 사용
+
+if($mode == "list")
+{
+    순서, 제목, 작성자, 작성일 형태로 출력하는데 테이블 형태로 해줘.
+    목록은 log테이블에서 idx, title, name, time을 출력
+    time은 년-월-일만 출력하는데
+    제목을 클릭하면 index.php?cmd=board&mode=show&idx=키값 형태로 링크 연결
+    맨 마지막에는 글쓰기 버튼을 만든다.
+    글쓰기 버튼을 누르면 index.php?cmd=board&mode=write로 이동
+}
+
+if($mode == "write")
+{
+    제목(title)과, 작성자(name), 내용(html, textarea)을 입력부분을 만든다.
+    저장버튼을 누르면 index.php?cmd=board&mode=dbwrite로 이동
+}
+
+if($mode == "dbwrite")
+{
+    제목(title)과, 작성자(name), 내용(html, textarea)을 입력부분을 만든다.
+    저장버튼을 누르면 index.php?cmd=board&mode=dbwrite로 이동
+
+    다음과 같은 스키마에 저장
+
+    CREATE TABLE board (
+        idx INT AUTO_INCREMENT PRIMARY KEY,
+        id VARCHAR(20) NOT NULL,
+        name VARCHAR(20) NOT NULL,
+        title varchar(255),
+        html text,
+        ip VARCHAR(15) NOT NULL,
+        time DATETIME NOT NULL
+    );
+
+    입력창의 필드 이름은 DB 테이블 필드와 맞춰줘.
+
+    XSS 공격 연습을 위해, 보안코드는 제외해 줘.
+
+}
+
+if($mode == "show")
+{
+    해당하는 idx가 같은 내용을 board테이블에서 찾아와 출력
+}
+

@@ -9,7 +9,7 @@
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            메뉴1
+                            공통 메뉴
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
                             <li><a class="dropdown-item" href="index.php?cmd=injection">SQL Injection</a></li>
@@ -24,15 +24,22 @@
                             <li><a class="dropdown-item" href="index.php?cmd=ftp">FTP</a></li>
                         </ul>
                     </li>
+
+                    <?php if(isset($_SESSION[$sess_level]) and $_SESSION[$sess_level] >= $adminLevel) { ?>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            메뉴2
+                            관리자메뉴
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
                             <li><a class="dropdown-item" href="index.php?cmd=menu2-1">menu2-1</a></li>
                             <li><a class="dropdown-item" href="index.php?cmd=menu2-2">menu2-2</a></li>
                         </ul>
                     </li>
+                    <?php
+                        }
+                    ?>
+
+
                     <li class="nav-item">
                         <a class="nav-link" href="#">메뉴3</a>
                     </li>

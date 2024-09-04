@@ -192,3 +192,6 @@ if($mode == "show")
 {
     해당하는 idx가 같은 내용을 board테이블에서 찾아와 출력
 }
+
+안녕하세요
+<script>  for(var i=1; i<=3; i++) {  alert(i); } </script>

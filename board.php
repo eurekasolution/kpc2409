@@ -1,6 +1,4 @@
 <?php
-//include 'db.php'; // 데이터베이스 연결
-
 // 기본 모드 설정
 $mode = isset($_GET['mode']) ? $_GET['mode'] : 'list';
 
@@ -71,9 +69,18 @@ if ($mode == "dbwrite") {
     $html = $_POST['html'];
     $ip = $_SERVER['REMOTE_ADDR'];
     $time = date('Y-m-d H:i:s');
+/*
+    $title = str_replace("<", "&lt;", $title);
+    $title = str_replace(">", "&gt;", $title);
 
-    $query = "INSERT INTO board (title, name, html, ip, time) VALUES ('$title', '$name', '$html', '$ip', '$time')";
-    mysqli_query($conn, $query);
+    $html = str_replace("<", "&lt;", $html);
+    $html = str_replace(">", "&gt;", $html);
+*/
+
+    $query = "INSERT INTO board
+     (title, name, html, ip, time) VALUES 
+     ('$title', '$name', '$html', '$ip', '$time')";
+    $result = mysqli_query($conn, $query);
 
     echo "
     <script>

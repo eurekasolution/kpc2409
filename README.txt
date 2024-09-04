@@ -132,10 +132,63 @@ CREATE TABLE board (
     idx INT AUTO_INCREMENT PRIMARY KEY,
     id VARCHAR(20) NOT NULL,
     name VARCHAR(20) NOT NULL,
+    title varchar(255),
     html text,
     ip VARCHAR(15) NOT NULL,
     time DATETIME NOT NULL
 );
 
+alter table board add title varchar(255) after name;
+
+
 INSERT INTO board (id, name, html, ip, time) 
     values('testid', '테스트', '내용 테스트', '1.2.3.4', now());
+
+다음과 같은 board.php파일 만들어줘.
+이파일은 index.php?cmd=board로 접근해서 게시판 코드만 있으면 돼.
+$mode에는 list, write, dbwrite, show으로 구성되어있음.
+$mode가 없으면 list를 기본값으로 사용
+
+if($mode == "list")
+{
+    순서, 제목, 작성자, 작성일 형태로 출력하는데 테이블 형태로 해줘.
+    목록은 log테이블에서 idx, title, name, time을 출력
+    time은 년-월-일만 출력하는데
+    제목을 클릭하면 index.php?cmd=board&mode=show&idx=키값 형태로 링크 연결
+    맨 마지막에는 글쓰기 버튼을 만든다.
+    글쓰기 버튼을 누르면 index.php?cmd=board&mode=write로 이동
+}
+
+if($mode == "write")
+{
+    제목(title)과, 작성자(name), 내용(html, textarea)을 입력부분을 만든다.
+    저장버튼을 누르면 index.php?cmd=board&mode=dbwrite로 이동
+}
+
+if($mode == "dbwrite")
+{
+    제목(title)과, 작성자(name), 내용(html, textarea)을 입력부분을 만든다.
+    저장버튼을 누르면 index.php?cmd=board&mode=dbwrite로 이동
+
+    다음과 같은 스키마에 저장
+
+    CREATE TABLE board (
+        idx INT AUTO_INCREMENT PRIMARY KEY,
+        id VARCHAR(20) NOT NULL,
+        name VARCHAR(20) NOT NULL,
+        title varchar(255),
+        html text,
+        ip VARCHAR(15) NOT NULL,
+        time DATETIME NOT NULL
+    );
+
+    입력창의 필드 이름은 DB 테이블 필드와 맞춰줘.
+
+    XSS 공격 연습을 위해, 보안코드는 제외해 줘.
+
+}
+
+if($mode == "show")
+{
+    해당하는 idx가 같은 내용을 board테이블에서 찾아와 출력
+}

@@ -16,8 +16,7 @@
 <?php else: ?>
     <!-- 로그인이 되어 있을 때 -->
     <p><?php echo $_SESSION[$sess_name]; ?> 님</p>
-    <form action="index.php?cmd=logout" method="get">
-        <button type="submit" class="btn btn-danger">로그아웃</button>
-    </form>
+        <button type="submit" class="btn btn-danger" onClick="location.href='index.php?cmd=logout'">로그아웃</button>
+
 <?php endif; ?>
 </div>

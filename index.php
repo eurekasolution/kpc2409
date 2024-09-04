@@ -1,6 +1,12 @@
 <?php
-include "db.php";
-$conn = connectDB();
+	include "db.php";
+	include "config.php";
+
+	$conn = connectDB();
+
+	session_save_path("sess");
+	session_start();
+	
 ?>
 
 <!DOCTYPE html>
@@ -41,6 +47,8 @@ $conn = connectDB();
                 $cmd = $_GET['cmd'];
                 $filename = "$cmd.php";
                 if (file_exists($filename)) {
+
+					//echo "include $filename , sessid = $sess_id<br>";
                     include $filename;
                 } else {
                     echo "<div class='alert alert-danger'>해당 페이지가 존재하지 않습니다.</div>";

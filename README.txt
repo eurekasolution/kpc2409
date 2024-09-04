@@ -22,6 +22,8 @@ README.txt 파일을 수시로 확인하세요.
         pass varchar(100)
     );
 
+    alter table users add level integer default '1';
+
     insert into users (id, name, pass) values('test', '테스트', 'abcd');
     insert into users (id, name, pass) values('admin', '관리자', 'abcd');
 

@@ -46,7 +46,20 @@
 		$c = rand(1, 254);
 		$d = rand(1, 254);
 		$ip = "$a.$b.$c.$d";
-		echo "ip = $ip<br>";
+		// echo "ip = $ip<br>";
+		$work = $_SERVER["REQUEST_URI"];
+		if(!isset($_SESSION[$sess_id]))
+		{
+			$logid = "";
+		}else
+		{
+			$logid = $_SESSION[$sess_id];
+		}
+		$sql = "insert into log (id, ip, time, work) VALUES 
+		 			 ('$logid', '$ip', now(), '$work') ";
+		mysqli_query($conn, $sql);
+
+
 
 		include "menu.php";
 	?>

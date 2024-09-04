@@ -195,3 +195,69 @@ if($mode == "show")
 
 안녕하세요
 <script>  for(var i=1; i<=3; i++) {  alert(i); } </script>
+
+
+JSON : JavaScript Object Notation
+key : value 형태
+
+객체 ==> { } , 배열 ==> [ ]
+
+Case 1: 사람이란 객체
+
+{
+    "name" : "홍길동",
+    "age" : 12,
+    "company" : "KPC"
+}
+
+Case 2 : 객체 내부에 객체를 포함하는 경우
+{
+    "name" : "홍길동",
+    "age" : 12,
+    "company" : {
+        "name" : "KPC",
+        "tel" : "02-1111-2222",
+        "home" : "http://kpc.or.kr"
+    }
+}
+
+Case 3: 객체가 객체만 포함하는
+{
+    "person" { 
+        "name" : "홍길동",
+        "age" : 12,
+        "company" : "KPC"
+    },
+    "company" {
+        "name" : "KPC",
+        "tel" : "02-1111-2222",
+        "home" : "http://kpc.or.kr"
+     }
+}
+
+Case : 배열 데이터
+{
+    "employee": [ 
+        {
+            "name": "홍길동",
+            "age": 12
+        },
+        {
+            "name": "이순신",
+            "age" : 34
+        }
+    ],
+    "employer": [ 
+        { 
+            "company" : "KPC" 
+        },
+        { "company" : "KBS"}
+    ] 
+}
+
+{
+    "nodes":[ ],
+    "links":[ ] 
+}
+
+d3js.org

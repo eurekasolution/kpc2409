@@ -486,3 +486,14 @@ if($mode == "show")
 <form action="index.php?cmd=file">
     이미지 <input type="file" name="command"> <실행버튼>
 </form>
+
+33. 다음을 만족하는 brute.php 파일을 만들어줘.
+- index.php?cmd=brute 했을 때 index.php에서 include되는 파일
+- HTML의 header 등은 이미 index.php 파일에 작성되어 있다.
+- Bootstap5를 이용
+4글자의 영문 소문자된 모든 텍스트를 검사.
+aaaa, aaab, aaac , ...., zzzz까지 검사하려고 함.
+각 텍스트를 $text에 저장한 후,
+각 텍스트에 대해 users테이블에 pass='$text' 인 데이터를 찾도록 해줘.
+만약에 찾으면 아이디와 비밀번호를 출력하고, 프로그램을 종료해줘.
+

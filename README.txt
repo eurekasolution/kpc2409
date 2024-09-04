@@ -141,8 +141,8 @@ CREATE TABLE board (
 alter table board add title varchar(255) after name;
 
 
-INSERT INTO board (id, name, html, ip, time) 
-    values('testid', '테스트', '내용 테스트', '1.2.3.4', now());
+INSERT INTO board (id, name, title,  html, ip, time) 
+    values('testid', '테스트', '제목 테스트', '내용 테스트', '1.2.3.4', now());
 
 다음과 같은 board.php파일 만들어줘.
 이파일은 index.php?cmd=board로 접근해서 게시판 코드만 있으면 돼.

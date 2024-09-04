@@ -1,5 +1,5 @@
 <?php
-include 'db.php'; // 데이터베이스 연결
+//include 'db.php'; // 데이터베이스 연결
 
 // 기본 모드 설정
 $mode = isset($_GET['mode']) ? $_GET['mode'] : 'list';

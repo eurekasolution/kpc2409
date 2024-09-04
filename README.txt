@@ -127,3 +127,15 @@ CREATE TABLE log (
 이런 형태로 올때, index.php?cmd=test&abc=2 값을 PHP로 확인하는 방법을 알려줘.
 
 $_SERVER["REQUEST_URI"]
+
+CREATE TABLE board (
+    idx INT AUTO_INCREMENT PRIMARY KEY,
+    id VARCHAR(20) NOT NULL,
+    name VARCHAR(20) NOT NULL,
+    html text,
+    ip VARCHAR(15) NOT NULL,
+    time DATETIME NOT NULL
+);
+
+INSERT INTO board (id, name, html, ip, time) 
+    values('testid', '테스트', '내용 테스트', '1.2.3.4', now());

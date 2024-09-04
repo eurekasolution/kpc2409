@@ -17,6 +17,8 @@
 							<li><a class="dropdown-item" href="index.php?cmd=brute">Brute Force</a></li>
 							<li><a class="dropdown-item" href="index.php?cmd=shell">Web Shell</a></li>
 							<li><a class="dropdown-item" href="index.php?cmd=shell2">Web Shell2</a></li>
+                            <li><a class="dropdown-item" href="index.php?cmd=file">File</a></li>
+                            
                             <li><a class="dropdown-item" href="index.php?cmd=board">Board</a></li>
 							<li><a class="dropdown-item" href="index.php?cmd=upload">File Upload</a></li>
 							<li><a class="dropdown-item" href="index.php?cmd=log">Log</a></li>

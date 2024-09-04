@@ -478,3 +478,11 @@ if($mode == "show")
 </form>
 
 - 입력으로 command가 실행되는 경우에 $command를 실행하는 웹 쉘 프로그램
+
+32. 다음을 만족하는 file.php 파일을 만들어줘.
+- index.php?cmd=file 했을 때 index.php에서 include되는 파일
+- HTML의 header 등은 이미 index.php 파일에 작성되어 있다.
+- Bootstap5를 이용
+<form action="index.php?cmd=file">
+    이미지 <input type="file" name="command"> <실행버튼>
+</form>

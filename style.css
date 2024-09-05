@@ -5,6 +5,23 @@ body { }     tag
 .test { }; class
 
 */
+
+    /* Flexbox 레이아웃 설정 */
+    html, body {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .container-flex {
+        flex: 1;
+    }
+    footer {
+        background-color: #f8f9fa;
+        padding: 10px 0;
+    }
+
+
 a:link { text-decoration:none; color:#333333; }
 a:hover { text-decoration:none; color:#555555; }
 a:visited { text-decoration:none; color:#333333; }

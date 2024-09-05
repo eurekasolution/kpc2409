@@ -21,7 +21,10 @@
                             <li><a class="dropdown-item" href="index.php?cmd=rand">Random</a></li>
                             
                             <li><a class="dropdown-item" href="index.php?cmd=board">Board</a></li>
-							<li><a class="dropdown-item" href="index.php?cmd=upload">File Upload</a></li>
+							<li><a class="dropdown-item" href="index.php?cmd=button">Button</a></li>
+                            <li><a class="dropdown-item" href="index.php?cmd=editor">Editor</a></li>
+
+                            <li><a class="dropdown-item" href="index.php?cmd=upload">File Upload</a></li>
 							<li><a class="dropdown-item" href="index.php?cmd=log">Log</a></li>
                             <li><a class="dropdown-item" href="index.php?cmd=fake">Fake</a></li>
                             <li><a class="dropdown-item" href="index.php?cmd=crawling">Crawling</a></li>

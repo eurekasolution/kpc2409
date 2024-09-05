@@ -19,22 +19,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    
+
     <style>
-        /* Flexbox 레이아웃 설정 */
-        html, body {
-            height: 100%;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-        }
-        .container-flex {
-            flex: 1;
-        }
-        footer {
-            background-color: #f8f9fa;
-            padding: 10px 0;
-        }
+
     </style>
 </head>
 <body>

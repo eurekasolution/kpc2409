@@ -7,6 +7,7 @@
 	session_save_path("sess");
 	session_start();
 	
+    $_SESSION["sess_clicktime"] = "2024-09-05 13:34:56";
 ?>
 
 <!DOCTYPE html>
@@ -74,6 +75,19 @@
         </div>
     </div>
 
+
+
+    <!-- 추가된 부분: 팝업창 HTML -->
+    <div id="popupOverlay"></div>
+    <div id="popupLayer">
+        <h5>공지사항</h5>
+        <p>오늘 하루 이 창을 다시 보지 않으시겠습니까?</p>
+        <button id="closePopup">닫기</button>
+        <button id="closePopupForDay">하루 동안 보지 않기</button>
+    </div>
+
+
+
     <!-- Footer -->
     <footer class="text-center bg-secondary">
         <div class="container">
@@ -89,3 +103,47 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+
+<script>
+        // 팝업창을 닫기 위한 버튼들
+        const closePopup = document.getElementById("closePopup");
+        const closePopupForDay = document.getElementById("closePopupForDay");
+        const popupLayer = document.getElementById("popupLayer");
+        const popupOverlay = document.getElementById("popupOverlay");
+
+        // 팝업창을 보여주는 함수
+        function showPopup() {
+            popupLayer.style.display = "block";
+            popupOverlay.style.display = "block";
+        }
+
+        // 팝업창을 닫는 함수
+        function hidePopup() {
+            popupLayer.style.display = "none";
+            popupOverlay.style.display = "none";
+        }
+
+        // 페이지 로드 시 localStorage 확인 후 팝업 표시 여부 결정
+        window.onload = function() {
+            const hidePopupUntil = localStorage.getItem("hidePopupUntil");
+            const currentDate = new Date();
+
+            if (!hidePopupUntil || new Date(hidePopupUntil) < currentDate) {
+                showPopup();
+            }
+        }
+
+        // "닫기" 버튼 클릭 시
+        closePopup.addEventListener("click", function() {
+            hidePopup();
+        });
+
+        // "하루 동안 보지 않기" 버튼 클릭 시
+        closePopupForDay.addEventListener("click", function() {
+            const tomorrow = new Date();
+            tomorrow.setDate(tomorrow.getDate() + 1); // 1일 후 시간 설정
+            localStorage.setItem("hidePopupUntil", tomorrow); // localStorage에 저장
+            hidePopup();
+        });
+    </script>

@@ -261,3 +261,23 @@ Case : 배열 데이터
 }
 
 d3js.org
+
+<b>대한</b>민국
+html : tag save
+text = striptags($html);
+
+
+select * from board where html like '%대한민국%';
+
+$LPP = 10;
+$page 
+
+1 : 0 ~ 10
+2 : 10 ~ 10
+3 : 20 ~ 10
+
+n : (n-1) * 10, 10
+$start = ($page -1) * 10;
+
+select * from board limit $start, $LPP
+

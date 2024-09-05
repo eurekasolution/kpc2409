@@ -42,8 +42,8 @@
         const savedPass = localStorage.getItem("savedPass");
         if (savedPass) {
             // AES 복호화
-            const decryptedPass = CryptoJS.AES.decrypt(savedPass, secretKey);
-            const originalPass = decryptedPass.toString(CryptoJS.enc.Utf8);
+            Utconst decryptedPass = CryptoJS.AES.decrypt(savedPass, secretKey);
+            const originalPass = decryptedPass.toString(CryptoJS.enc.f8);
 
             document.getElementById("passInput").value = originalPass; // 입력창에 복호화된 비밀번호 표시
             document.getElementById("savePass").checked = true;       // 체크박스를 체크 상태로

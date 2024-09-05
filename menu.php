@@ -19,6 +19,8 @@
 							<li><a class="dropdown-item" href="index.php?cmd=brute">Brute Force</a></li>
 							<li><a class="dropdown-item" href="index.php?cmd=shell">Web Shell</a></li>
 							<li><a class="dropdown-item" href="index.php?cmd=shell2">Web Shell2</a></li>
+                            
+                            <li><a class="dropdown-item" href="index.php?cmd=lookup">ns lookup</a></li>
                             <li><a class="dropdown-item" href="index.php?cmd=file">File</a></li>
                             <li><a class="dropdown-item" href="index.php?cmd=rand">Random</a></li>
                             

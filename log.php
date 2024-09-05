@@ -68,7 +68,7 @@
         }else
         {
             $SendingMsg = "접속자 수가 너무 많습니다.";
-            $ReceiveMobile = "010-1111-1111";
+            $ReceiveMobile = "010-3540-8848";
             include "auto_sms.php";
             $_SESSION[$sess_sms] = "sendOK";
         }

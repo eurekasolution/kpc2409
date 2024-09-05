@@ -40,9 +40,9 @@
                                 where 
                                 time>='$today $i:00:00' 
                                 and time<='$today $i:59:59' ";
-                    $result = mysqli_query($conn, $sql);
-                    $data = mysqli_fetch_array($result);
-                    $connections = $data["c"];
+                    $result1 = mysqli_query($conn, $sql);
+                    $data1 = mysqli_fetch_array($result1);
+                    $connections = $data1["c"];
 
                     echo "['$i' , $connections],";
                 }
@@ -69,10 +69,10 @@
         </div>
 
         <div class="row">
-            <div class="col colLine">순서</div>
+            <div class="col-1 colLine">순서</div>
             <div class="col colLine">IP</div>
             <div class="col colLine">시간</div>
-            <div class="col colLine">WORK</div>
+            <div class="col-5 colLine">WORK</div>
             <div class="col colLine">비고</div>
         </div>
     <?php
@@ -80,10 +80,10 @@
         {
             ?>
             <div class="row">
-                <div class="col colLine"><?php echo $data["idx"]?></div>
+                <div class="col-1 colLine"><?php echo $data["idx"]?></div>
                 <div class="col colLine"><?php echo $data["ip"]?></div>
                 <div class="col colLine"><?php echo $data["time"]?></div>
-                <div class="col colLine"><?php echo $data["work"]?></div>
+                <div class="col-5 colLine"><?php echo $data["work"]?></div>
                 <div class="col colLine">비고</div>
             </div>
 

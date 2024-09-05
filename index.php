@@ -47,9 +47,13 @@
 		{
 			$logid = $_SESSION[$sess_id];
 		}
-		$sql = "insert into log (id, ip, time, work) VALUES 
+
+        if(isset($_GET["cmd"]) and $_GET["cmd"] != "log") {
+            $sql = "insert into log (id, ip, time, work) VALUES 
 		 			 ('$logid', '$ip', now(), '$work') ";
-		mysqli_query($conn, $sql);
+		    mysqli_query($conn, $sql);
+        }
+		
 
 
 

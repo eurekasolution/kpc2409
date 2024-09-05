@@ -1,0 +1,18 @@
+/*  
+comment 
+body { }     tag
+#sunday { }; id
+.test { }; class
+
+*/
+a:link { text-decoration:none; color:#333333; }
+a:hover { text-decoration:none; color:#555555; }
+a:visited { text-decoration:none; color:#333333; }
+
+.colLine {
+    line-height:180%;
+    min-height:30px;
+    border-bottom:1px solid #CCCCCC;
+    padding-top:4px;
+    padding-bottom:4px;
+}

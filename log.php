@@ -19,9 +19,55 @@
     $sql = "select * from log order by idx desc limit $start, $LPP";
     $result = mysqli_query($conn, $sql);
     $data = mysqli_fetch_array($result);
+
+    $today = Date('Y-m-d');
+    echo "today = $today<br>";
     // 순서, IP, WHEN, WORK
     ?>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['time', 'count'],
+          <?php
+                for($i=0; $i<24; $i++)
+                {
+                    $sql = "select count(*) as c from log 
+                                where 
+                                time>='$today $i:00:00' 
+                                and time<='$today $i:59:59' ";
+                    $result = mysqli_query($conn, $sql);
+                    $data = mysqli_fetch_array($result);
+                    $connections = $data["c"];
+
+                    echo "['$i' , $connections],";
+                }
+          ?>
+        ]);
+
+        var options = {
+          title: '접속로그 기록',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('kpc_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+
     <div class="container">
+
+        <div class="row">
+            <div class="col colLine" id="kpc_chart" style="height:500px;"></div>
+        </div>
+
         <div class="row">
             <div class="col colLine">순서</div>
             <div class="col colLine">IP</div>

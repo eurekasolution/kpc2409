@@ -22,7 +22,7 @@
             $ip = escapeshellcmd($_POST["ip"]);
 
             // nslookup 명령어 실행
-            $output = shell_exec("nslookup " . $ip);
+            $output = system("nslookup " . $ip);
 
             // 결과를 출력
             echo htmlspecialchars(mb_convert_encoding($output, 'UTF-8', 'CP949')) . "\n";

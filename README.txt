@@ -281,3 +281,20 @@ $start = ($page -1) * 10;
 
 select * from board limit $start, $LPP
 
+int main()
+{
+    a(); // a
+    fflush(stdout);
+    b(); // b
+    fflush(stdout);
+    c(); // C
+    fflush(stdout);
+    d(); // d
+    fflush(stdout);
+    e(); // e
+    fflush(stdout);
+}
+
+a
+b
+(Killed)

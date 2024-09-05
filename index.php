@@ -130,7 +130,7 @@
             const currentDate = new Date();
 
             if (!hidePopupUntil || new Date(hidePopupUntil) < currentDate) {
-                showPopup();
+                // showPopup();
             }
         }
 

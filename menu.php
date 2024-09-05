@@ -13,6 +13,8 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
                             <li><a class="dropdown-item" href="index.php?cmd=injection">SQL Injection</a></li>
+                            <li><a class="dropdown-item" href="index.php?cmd=storage">Local Storage</a></li>
+                            
                             <li><a class="dropdown-item" href="index.php?cmd=xss">XSS</a></li>
 							<li><a class="dropdown-item" href="index.php?cmd=brute">Brute Force</a></li>
 							<li><a class="dropdown-item" href="index.php?cmd=shell">Web Shell</a></li>

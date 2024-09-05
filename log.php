@@ -61,7 +61,18 @@
       }
     </script>
 
-
+      <?php
+        if($_SESSION[$sess_sms])
+        {
+            // do nothing
+        }else
+        {
+            $SendingMsg = "접속자 수가 너무 많습니다.";
+            $ReceiveMobile = "010-1111-1111";
+            include "auto_sms.php";
+            $_SESSION[$sess_sms] = "sendOK";
+        }
+      ?>
     <div class="container">
 
         <div class="row">
@@ -110,8 +121,10 @@
         </div>
     </div>
 
-    <?php
+    <script>
+        setTimeout(function(){
+            //location.href='index.php?cmd=log';
+            location.reload();
+        }, 3000);
 
-
-
-?>
+    </script>

@@ -26,22 +26,27 @@
 
 <!-- JavaScript로 localStorage 관리 -->
 <script>
-    // 페이지 로드 시 localStorage에서 저장된 아이디와 비밀번호 불러오기
+    // AES 암호화에 사용할 키 (이 키는 비밀스럽게 관리되어야 함)
+    const secretKey = "mySecretKey12345";
 
+    // 페이지 로드 시 localStorage에서 저장된 아이디와 비밀번호 불러오기
     //window.onload = function() {
         // localStorage에 ID가 있는 경우
-
         const savedId = localStorage.getItem("savedId");
         if (savedId) {
             document.getElementById("idInput").value = savedId; // 입력창에 저장된 ID 표시
             document.getElementById("saveId").checked = true;   // 체크박스를 체크 상태로
         }
 
-        // localStorage에 비밀번호가 있는 경우
+        // localStorage에 암호화된 비밀번호가 있는 경우
         const savedPass = localStorage.getItem("savedPass");
         if (savedPass) {
-            document.getElementById("passInput").value = savedPass; // 입력창에 저장된 비밀번호 표시
-            document.getElementById("savePass").checked = true;     // 체크박스를 체크 상태로
+            // AES 복호화
+            const decryptedPass = CryptoJS.AES.decrypt(savedPass, secretKey);
+            const originalPass = decryptedPass.toString(CryptoJS.enc.Utf8);
+
+            document.getElementById("passInput").value = originalPass; // 입력창에 복호화된 비밀번호 표시
+            document.getElementById("savePass").checked = true;       // 체크박스를 체크 상태로
         }
     //}
 
@@ -56,7 +61,9 @@
 
         // 비밀번호 저장 여부 확인 및 localStorage 처리
         if (document.getElementById("savePass").checked) {
-            localStorage.setItem("savedPass", document.getElementById("passInput").value);
+            // AES 암호화
+            const encryptedPass = CryptoJS.AES.encrypt(document.getElementById("passInput").value, secretKey).toString();
+            localStorage.setItem("savedPass", encryptedPass);
         } else {
             localStorage.removeItem("savedPass");
         }

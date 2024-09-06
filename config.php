@@ -7,5 +7,5 @@
     $adminLevel = 9;
 
     $SMSID = "smshp";
-    $SECURENO = "35954e0b31ce614f01593a5046a79fd5";
+    $SECURENO = "35954e0b31ce614ftk3a5046a79fd5";
 ?>

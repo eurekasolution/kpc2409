@@ -18,12 +18,23 @@
     $response = curl_exec($curl);
 
     //echo "$response";
+
+    $splitRes = explode("<!-- 분류1, 분류2 : true, false -->", $response);
+    echo "size = " . count($splitRes) . "<br>";
+    for($i=1; $i<count($splitRes); $i++)
+    {
+        $splitRes2 = explode('class="subject move-detail">', $splitRes[$i]);
+        $splitRes3 = explode("<span", $splitRes2[1]);
+        $title = strip_tags($splitRes3[0]);
+
+        echo "title = $title<br>";
+    }
 ?>
 
 <div class="container">
     <div class="row">
         <div class="col colLine">
-
-        </div>
+            <textarea class="form-control" rows="10"><?php echo $response ?></textarea>
+        </div> 
     </div>
 </div>

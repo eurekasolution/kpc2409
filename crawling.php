@@ -38,3 +38,10 @@
         </div> 
     </div>
 </div>
+
+<?php
+    $page = $page + 1;
+
+    // 'index.php?cmd=crawling&page=$page';
+    // Timer
+?>
